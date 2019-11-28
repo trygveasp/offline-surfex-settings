@@ -8,20 +8,22 @@
   },
   "properties": {
     "CASSIM_ISBA": {
-    "type": "string",
-    "description": "Soil assimilation",
-    "enum": [
+      "type": "string",
+      "description": "Soil assimilation",
+      "enum": [
         "OI",
         "EKF",
         "NONE"
-    ],
-    "options": {
+      ],
+      "options": {
         "enum_titles": [
             "OI  | Vertical Optimal Interpolation",
             "EKF | Extended Kalman Filter",
             "NONE | No surface assimilation"
         ]
-    },
-    "default": "NONE"
+      },
+      "default": "NONE"
+    }
   }
 }
+

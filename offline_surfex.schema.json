@@ -1,6 +1,5 @@
 {
   "$id": "./offline_surfex.schema.json",
-  "$schema" : "http://json-schema.org/schema#",
   "title": "OFFLINE SUREX configuration",
   "description" : "Tool to set up offline SURFEX configurations",
   "options": {
