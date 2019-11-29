@@ -1,0 +1,136 @@
+{
+  "type": "object",
+  "title": "Surface assimilation",
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": false,
+    "disable_edit_json": true
+  },
+  "required": ["LASSIM","CASSIM_SEA","CASSIM_ISBA"],
+  "properties": {
+    "LASSIM": {
+      "type": "boolean",
+      "description": "Switch to turn on/off surface assimilation",
+      "enum": [
+        true,
+        false
+      ],
+      "options": {
+        "enum_titles": [
+            "true  | Do assimilation",
+            "false | No assimilation"
+        ]
+      },
+      "default": false
+    },
+    "CASSIM_SEA": {
+      "type": "string",
+      "description": "Update of SST",
+      "enum": [
+        "INPUT",
+        "NONE"
+      ],
+      "options": {
+        "enum_titles": [
+            "INPUT  | Read SST from input file",
+            "NONE | No surface assimilation"
+        ]
+      },
+      "default": "INPUT"
+    },
+    "LREAD_SST_FROM_FILE": {
+      "type": "boolean",
+      "description": "Read SST to update from a file",
+      "enum": [
+        true,
+        false
+      ],
+      "options": {
+        "enum_titles": [
+            "true  | Read input SST from file",
+            "false | TODO"
+        ]
+      },
+      "default": true
+    },
+    "CASSIM_WATER": {
+      "type": "string",
+      "description": "Update of inland water temperature",
+      "enum": [
+        "INPUT",
+        "NONE"
+      ],
+      "options": {
+        "enum_titles": [
+            "INPUT  | Read temperature to update to from an input file",
+            "NONE | No surface assimilation"
+        ]
+      },
+      "default": "NONE"
+    },
+    "LWATERTG2": {
+      "type": "boolean",
+      "description": "Update of inland water temperature",
+      "enum": [
+        true,
+        false
+      ],
+      "options": {
+        "enum_titles": [
+            "true  | Update lake temperature from TG2. Should be extrapolated afterwards",
+            "false | not do anything extra"
+        ]
+      },
+      "default": false
+    },
+    "LEXTRAP_WATER": {
+      "type": "boolean",
+      "description": "Extrapolate inland water temperature",
+      "enum": [
+        true,
+        false
+      ],
+      "options": {
+        "enum_titles": [
+            "true  | Extrapolate lake temperatures to the lakes from the nearest updated value",
+            "false | Keep input"
+        ]
+      },
+      "default": false
+    },
+    "CASSIM_ISBA": {
+      "type": "string",
+      "description": "Soil assimilation",
+      "enum": [
+        "OI",
+        "EKF",
+        "NONE"
+      ],
+      "options": {
+        "enum_titles": [
+            "OI  | Vertical Optimal Interpolation",
+            "EKF | Extended Kalman Filter",
+            "NONE | No surface assimilation"
+        ]
+      },
+      "default": "EKF"
+    },
+    "CASSIM_TEB": {
+      "type": "string",
+      "description": "Update of TEB model for town tile",
+      "enum": [
+        "ROADT",
+        "NONE"
+      ],
+      "options": {
+        "enum_titles": [
+            "ROADT  | Update one road layer temperature based on input field",
+            "NONE | No surface assimilation"
+        ]
+      },
+      "default": "NONE"
+    }
+  }
+}
+

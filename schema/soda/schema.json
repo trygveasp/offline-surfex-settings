@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "title": "Surface assimilation and observations",
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true,
+    "disable_edit_json": true
+  },
+  "required": ["assimilation", "observations"],
+  "properties": {
+    "assimilation": {
+      "$ref": "./assim.schema.json"
+    },
+    "observations": {
+      "$ref": "./obs.schema.json"
+    }
+  }
+}
+

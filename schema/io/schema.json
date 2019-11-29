@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "title": "IO settings",
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true,
+    "disable_edit_json": true
+  },
+  "required": ["CSURF_FILETYPE"],
+  "properties": {
+    "CSURF_FILETYPE": {
+      "type": "string",
+      "description": "File type for SURFEX physiography, initial file and restart file",
+      "enum": [
+        "FA",
+        "NC",
+        "ASCII"
+      ],
+      "options": {
+       "enum_titles": [
+            "FA  | Ficier Arpege. See also LFAGMAP",
+            "NC | NetCDF",
+            "ASCII | ASCII files"
+        ]
+      },
+      "default": "NC"
+    }
+  }
+}

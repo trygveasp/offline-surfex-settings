@@ -7,18 +7,25 @@
     "disable_edit_json": false,
     "disable_collapse": true
   },
-  "format": "categories",
+  "format": "grid",
   "type": "object",
   "additionalProperties": true,
-  "properties": {  
-    "$schema" : {
-      "type" : "string" 
+  "required": ["io", "pgd", "prep", "offline", "soda"],
+  "properties": {
+    "io": {
+      "$ref": "schema/io/schema.json"
     },
-    "description" : {
-      "type" : "string"
+    "pgd": {
+      "$ref": "schema/pgd/schema.json"
     },
-    "Assimilation": {
-      "$ref": "schema/assimilation/surface_assimilation.schema.json"
+    "prep": {
+      "$ref": "schema/prep/schema.json"
+    },
+    "offline": {
+      "$ref": "schema/offline/schema.json"
+    },
+    "soda": {
+      "$ref": "schema/soda/schema.json"
     }
   }
 }

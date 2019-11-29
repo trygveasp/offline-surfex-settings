@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "title": "PGD settings",
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true,
+    "disable_edit_json": true
+  },
+  "properties": {
+  }
+}

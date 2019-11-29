@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "title": "Observations used in surface assimilation",
+  "additionalProperties": false,
+  "format": "grid",
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true,
+    "disable_edit_json": true
+  },
+  "required": ["SPATIALIZATION_TOOL","CFILE_FORMAT_OBS"],
+  "properties": {
+    "SPATIALIZATION_TOOL": {
+      "type": "string",
+      "description": "Tool to create a 2D horizontal analysis",
+      "enum": [
+        "gridpp",
+        "CANARI"
+      ],
+      "options": {
+        "enum_titles": [
+            "gridpp  | gridpp https://github.com/metno/gridpp",
+            "CANARI | Execution of MATERODB with CANARI namelist and ODB input"
+        ]
+      },
+      "default": "ASCII"
+    },
+    "CFILE_FORMAT_OBS": {
+      "type": "string",
+      "description": "File format for observations as input to SODA",
+      "enum": [
+        "ASCII",
+        "FA"
+      ],
+      "options": {
+        "enum_titles": [
+            "ASCII  | Observations in ASCII file",
+            "FA | Ficier Arpege"
+        ]
+      },
+      "default": "ASCII"
+    }
+  }
+}
